@@ -15,5 +15,10 @@ class Format
                 end
             end
         end 
+        hash[3] = true unless hash[4][0..3] == [0,0,0,0]
+        puts "bien formateado" if hash[3] == false
+        if hash[3] == true then
+            
+        end
     end
 end
