@@ -17,8 +17,6 @@ class Format
         end 
         hash[3] = true unless hash[4][0..3] == [0,0,0,0]
         puts "bien formateado" if hash[3] == false
-        if hash[3] == true then
-            
-        end
+        puts "mal formateado" unless hash[3] == false
     end
 end
