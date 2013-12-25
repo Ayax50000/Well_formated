@@ -1,5 +1,5 @@
-class Format
-    def self.check(expresion)
+class Expresion
+    def self.correcta?(expresion)
         correcto , incorrecto = "correctamente formateado","incorrectamente formateado"
         caracteres, respuesta , encontrar = { :open => ["<","(","{","["] , :close => [">",")","}","]" ] }, correcto , [""]
         expresion.each_char do |caracter|
