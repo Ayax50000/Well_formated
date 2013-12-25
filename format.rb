@@ -2,10 +2,10 @@ class Format
     def self.check(expresion)
         hash = { 1 => ["<","(","{","["] , 2 => [">",")","}","]" ] , 3 => false , 4 => [0,0,0,0] }
         expresion = expresion
-        expresion.each_char do |ent|
+        expresion.each_char do |caracter|
             [0,1,2,3].each do |x|
-                hash[4][x] += 1 if hash[1].at(x) == ent
-                if hash[2].at(x) == ent then
+                hash[4][x] += 1 if hash[1].at(x) == caracter
+                if hash[2].at(x) == caracter then
                     if hash[4].at(x) == 0 then
                         hash[3] = true
                     end
