@@ -3,13 +3,13 @@ class Format
         hash = { 1 => ["<","(","{","["] , 2 => [">",")","}","]" ] , 3 => false , 4 => [0,0,0,0] }
         expresion = expresion
         expresion.each_char do |caracter|
-            [0,1,2,3].each do |x|
-                hash[4][x] += 1 if hash[1].at(x) == caracter
-                if hash[2].at(x) == caracter then
-                    if hash[4].at(x) == 0 then
+            [0,1,2,3].each do |index|
+                hash[4][index] += 1 if hash[1].at(index) == caracter
+                if hash[2].at(index) == caracter then
+                    if hash[4].at(index) == 0 then
                         hash[3] = true
                     end
-                        hash[4][x] -= 1
+                        hash[4][index] -= 1
                 end
             end
         end
