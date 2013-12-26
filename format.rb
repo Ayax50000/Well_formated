@@ -3,7 +3,7 @@ class Expresion
         correcto , incorrecto = "correctamente formateado","incorrectamente formateado"
         caracteres, respuesta , encontrar = { :open => ["<","(","{","["] , :close => [">",")","}","]" ] }, correcto , [""]
         expresion.each_char do |caracter|
-            [0,1,2,3].each do |index|
+            (caracteres[:open].size-1).times do |index|
                encontrar << caracteres[:close][index] if caracteres[:open][index] == caracter
                if caracteres[:close][index] == caracter then
                   if caracter == encontrar.last then
