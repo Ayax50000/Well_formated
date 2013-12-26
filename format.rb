@@ -5,12 +5,8 @@ class Validador
         expresion.each_char do |caracter|
             (caracteres[:open].size).times do |index|
                encontrar << caracteres[:close][index] if caracteres[:open][index] == caracter
-               if caracteres[:close][index] == caracter then
-                  if caracter == encontrar.last then
-                    encontrar.pop
-                  else
-                    respuesta = false
-                  end
+               if caracteres[:close][index] == caracter
+                  (caracter == encontrar.last)?  encontrar.pop : respuesta = false
                end
             end
         end
