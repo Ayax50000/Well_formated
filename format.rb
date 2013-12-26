@@ -1,6 +1,7 @@
 class Validador
     def self.correcta?(expresion)
-        caracteres,respuesta,encontrar={:open=>["<","(","{","["],:close=>[">",")","}","]"]},true,[nil]
+        caracteres = {:open=>["<","(","{","["],:close=>[">",")","}","]"]}
+        respuesta,encontrar = true , [nil]
         expresion.each_char do |caracter|
             (caracteres[:open].size).times do |index|
                encontrar << caracteres[:close][index] if caracteres[:open][index] == caracter
