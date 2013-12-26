@@ -1,4 +1,4 @@
-class Expresion
+class Validador
     def self.correcta?(expresion)
         correcto , incorrecto = "correctamente formateado","incorrectamente formateado"
         caracteres, respuesta , encontrar = { :open => ["<","(","{","["] , :close => [">",")","}","]" ] }, correcto , [""]
