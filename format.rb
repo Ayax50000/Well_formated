@@ -13,5 +13,5 @@ class Validador
     end
     respuesta = false if encontrar != [nil]
     puts (respuesta == true)? "correctamente formateado":"incorrectamente formateado"
-    end
+  end
 end
